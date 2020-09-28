@@ -37,7 +37,7 @@ public class Game {
                 System.out.println("El codigo secreto es: "+ compCode+"\n");
             }
 
-            System.out.println("Tienes " + numGuesses + " de intentos.");
+            System.out.println("Tienes " + numGuesses + " intentos.");
 
             boolean badcode = true;
             Code userCode = new Code();
@@ -51,7 +51,7 @@ public class Game {
                 String guess = keyboard.nextLine();
 
                 try {
-                    userCode = new Code(guess);
+                    userCode = new Code(guess.toUpperCase());
                 } catch (IllegalArgumentException e) {
                     badcode = true;
                 }
